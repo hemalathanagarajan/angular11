@@ -21,6 +21,7 @@ import { BookComponent } from './book/book.component';
 import { TabComponent } from './tab/tab.component';
 import { PriceDiscountPipe } from './price-discount.pipe';
 import { BookFormComponent } from './book-form/book-form.component';
+import { BookListComponent } from './book-list/book-list.component';
 const routes:Routes=[
   {path: '',component:HomeComponent},
   {path: 'boxa',component:BoxaComponent},
@@ -46,7 +47,8 @@ const routes:Routes=[
     BookComponent,
     TabComponent,
     PriceDiscountPipe,
-    BookFormComponent
+    BookFormComponent,
+    BookListComponent
   ],
   imports: [
     BrowserModule,
