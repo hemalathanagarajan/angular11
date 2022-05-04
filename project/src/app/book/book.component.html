@@ -1,0 +1,16 @@
+<p>book works!</p>
+<div>
+    <h4>Book name:{{book.name | uppercase}} - <small> {{ book.publishdate | date:'MMM YYYY'}}</small> </h4>
+
+    <h5>Original Price:{{book.price | currency:'INR':true}}</h5>
+
+    <h5> Discount:{{book.discount}}</h5>
+
+    <h4> Discounted price:{{book.price | priceDiscount:book.discount | currency:'INR':true }}</h4>
+
+    <img alt="3 zeros " [src]="book.images[0].thumb">
+    <p>Author:{{book.author}}</p>
+    <button class="btn btn-primary" type="button" *ngIf="book.canBuy" (click)="onbuy(book)">BUY</button>
+    <pre>{{book | json}}</pre>
+
+</div>

@@ -1,0 +1,9 @@
+<p>parent works!</p>
+<button (click)="toggleChild()">Toggle</button>
+
+<input type="text" [(ngModel)]="channelName">
+
+<app-child *ngIf="isChild" [channelName]="channelName">
+
+    <h2> ng after content view used</h2>
+</app-child>
